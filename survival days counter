@@ -1,0 +1,16 @@
+import datetime
+dob_i=input("Enter your DOB(YY/MM/DD): ")
+pdate_i=input("Enter Todays Date(YY/MM/DD): ")
+dob=dob_i.split("/")
+pdate=pdate_i.split("/")
+date1=datetime.date(int(dob[0]),
+                    int(dob[1]),
+                    int(dob[2]))
+date2=datetime.date(int(pdate[0]),
+                        int(pdate[1]),
+                        int(pdate[2]))
+if date1>date2:
+    diffrence=(date1-date2).days
+else:
+    diffrence=(date2-date1).days
+print("The days you survived:",diffrence)
